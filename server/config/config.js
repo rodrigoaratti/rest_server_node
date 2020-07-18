@@ -10,6 +10,6 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 if (process.env.NODE_ENV === 'dev') {
     process.env.URL_DB_MONGO = `mongodb://${process.env.MONGO_DB_SERVER}:${process.env.MONGO_DB_PORT}}/${process.env.MONGO_DB_DATABASE}`;
 } else {
-    process.env.URL_DB_MONGO = 'mongodb+srv://rodrigo:ItzqtuN3GSm65dU2@cluster0.mm7lz.mongodb.net/cafe?retryWrites=true&w=majority';
-    //mongodb+srv://rodrigo:ItzqtuN3GSm65dU2@cluster0.mm7lz.mongodb.net/cafe?retryWrites=true&w=majority
+    process.env.URL_DB_MONGO = `mongodb+srv://${process.env.usuariodb}:${process.env.passdb}@${process.env.hostdb}?retryWrites=true&w=majority`;
+
 }
