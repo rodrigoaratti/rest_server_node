@@ -32,7 +32,7 @@ let usuarioSchema = new Schema({
     },
     role: {
         type: String,
-        defaul: 'USUARIO',
+        default: 'USUARIO',
         enum: rolesValidos
     },
     estado: {

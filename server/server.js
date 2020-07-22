@@ -9,7 +9,9 @@ const app = express()
 
 app.use(body.urlencoded({ extended: false }));
 app.use(body.json());
-app.use(require('./routes/usuario'));
+
+app.use(require('./routes/index'));
+
 
 app.listen(process.env.PORT, () => {
     mongoose.connect(process.env.URL_DB_MONGO, {
