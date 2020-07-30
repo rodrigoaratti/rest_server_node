@@ -17,3 +17,5 @@ if (process.env.NODE_ENV === 'dev') {
 }
 
 process.env.GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID || '211327220145-2cfnfhh5iuvlfesirqjmu1sb76di9ons.apps.googleusercontent.com';
+
+process.env.EXTENSIONES_VALIDAS = ['png', 'jpg', 'gif'];

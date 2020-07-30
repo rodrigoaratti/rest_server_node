@@ -4,6 +4,8 @@ const Usuario = require('../models/usuario');
 const bcrypt = require('bcrypt');
 const _ = require('underscore');
 
+
+
 const { verificarToken, verificarAdminRole } = require('../middlewares/autenticacion');
 
 app.get('/', function(req, res) {
@@ -27,7 +29,7 @@ app.get('/usuario', verificarToken, (req, res) => {
 
     console.log(condicion);
 
-    Usuario.find(condicion, 'estado google  nombre email apellido role')
+    Usuario.find(condicion, 'estado google  nombre email apellido role img')
         .limit(limite)
         .skip(desde)
         .exec((err, usuarios) => {
